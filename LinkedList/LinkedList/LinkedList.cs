@@ -5,10 +5,27 @@ namespace LinkedList
 {
     class LinkedList
     {
-        //internal Node head;
-        internal void Display(Node head)
+        internal Node head;
+        //internal Node Tail;
+        internal void Add(int data)
         {
-            Node temp = head;
+            Node node = new Node(data);
+            if (this.head == null)
+                this.head = node;
+            else
+            {
+                Node temp = head;
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = node;
+            }
+            Console.WriteLine("{0} inserted into the linked list", node.data);
+        }
+        internal void Display()
+        {
+            Node temp = this.head;
             if (temp == null)
             {
                 Console.WriteLine("Linked list is empty");
