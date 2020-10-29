@@ -80,7 +80,7 @@ namespace LinkedList
             }
             return head;
         }
-        internal Node RemoveFirstNode()
+        internal Node Pop()
         {
             if (this.head == null)
                 return null;
